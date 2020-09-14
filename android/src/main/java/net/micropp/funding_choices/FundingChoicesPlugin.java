@@ -32,12 +32,13 @@ public class FundingChoicesPlugin implements FlutterPlugin, MethodCallHandler, A
   private ConsentInformation consentInformation;
   private ConsentForm consentForm;
   private boolean umpRequested;
+  private boolean tagForUnderAgeOfConsent;
 
-  private void setUpUMP(@NonNull boolean tagForUnderAgeOfConsent) {
+  private void setUpUMP() {
     this.umpRequested = true;
     if(this.activity == null) return;
     this.umpRequested = false;
-    ConsentRequestParameters params = new ConsentRequestParameters.Builder().setTagForUnderAgeOfConsent(tagForUnderAgeOfConsent).build();
+    ConsentRequestParameters params = new ConsentRequestParameters.Builder().setTagForUnderAgeOfConsent(this.tagForUnderAgeOfConsent).build();
     consentInformation = UserMessagingPlatform.getConsentInformation(appContext);
     consentInformation.requestConsentInfoUpdate(
       activity,
@@ -128,8 +129,8 @@ public class FundingChoicesPlugin implements FlutterPlugin, MethodCallHandler, A
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if (call.method.equals("init")) {
       this.umpRequested = false;
-      final boolean tagForUnderAgeOfConsent = call.argument("tagForUnderAgeOfConsent");
-      setUpUMP(tagForUnderAgeOfConsent);
+      this.tagForUnderAgeOfConsent = call.argument("tagForUnderAgeOfConsent");
+      setUpUMP();
     } else {
       result.notImplemented();
     }
