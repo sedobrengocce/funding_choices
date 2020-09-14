@@ -1,5 +1,5 @@
-name: funding_choices_to_be_removed_example
-description: Demonstrates how to use the funding_choices_to_be_removed plugin.
+name: funding_choices_example
+description: Demonstrates how to use the funding_choices plugin.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -14,7 +14,7 @@ dependencies:
 
   funding_choices:
     # When depending on this package from a real application you should use:
-    #   funding_choices_to_be_removed: ^x.y.z
+    #   funding_choices: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints
     # The example app is bundled with the plugin so we use a path dependency on
     # the parent directory to use the current plugin's version.

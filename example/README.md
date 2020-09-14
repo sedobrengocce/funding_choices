@@ -1,6 +1,6 @@
-# funding_choices_to_be_removed_example
+# funding_choices
 
-Demonstrates how to use the funding_choices_to_be_removed plugin.
+Demonstrates how to use the funding_choices plugin.
 
 ## Getting Started
 
