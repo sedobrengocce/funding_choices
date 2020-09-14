@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:funding_choices_to_be_removed_example/main.dart';
+import 'package:funding_choices_example/main.dart';
 
 void main() {
   testWidgets('Verify Platform version', (WidgetTester tester) async {
