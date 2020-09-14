@@ -1,6 +1,6 @@
 # Funding Choices
 
-A wrapper for Google's Mobile Ads Consent SDK, i.e. used as GDPR dialog on Android and iOS. The IOS version is still under development.
+A wrapper for Google's Mobile Ads Consent SDK, i.e. used as GDPR dialog on Android and iOS
 
 ## Usage
 First of all set up your account at [Google Funding Choices](https://fundingchoices.google.com/) and activate SDK for your App.
@@ -34,6 +34,8 @@ Install the packages
 flutter pub get
 ```
 
+#### Android
+
 Edit your ```app/build.gradle```
 ``` gradle
 android {
@@ -56,5 +58,21 @@ Edit you ```AndroidManifeft.xml```
        <activity android:name=".MainActivity"
        ...
 ```
+
+#### iOS
+You need to add an app id in your ```Info.plist``` 
+
+```xml
+<key>GADApplicationIdentifier</key>
+<string>YOUR-APP-ID</string>
+```
+
+And description in your ```Info.plist```
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>This identifier will be used to deliver personalized ads to you.</string>
+```
+
 ### Publisher ID
 Your publisher ID is the unique identifier for your AdMob account. [Find your publisher ID](https://support.google.com/admob/answer/2784578). It should look like this ```ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX```.

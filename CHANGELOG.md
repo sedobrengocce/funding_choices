@@ -1,3 +1,7 @@
+## 0.5.2+1
+
+* Update README
+
 ## 0.5.2
 
 * IOS Support
