@@ -1,0 +1,27 @@
+name: funding_choices
+description: A flutter library to unofficially support Google Funging Choices, a google service to handle GDPR and CCPA Consent
+version: 0.5.2
+homepage: https://micropp.net
+repository: https://github.com/sedobrengocce/funding_choices
+issue_tracker: https://github.com/sedobrengocce/funding_choices/issues
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.20.0 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: net.micropp.funding_choices
+        pluginClass: FundingChoicesPlugin
+      ios:
+        pluginClass: FundingChoicesPlugin
